@@ -1,0 +1,9 @@
+{{ with .Params.contact }}
+<section id="contact" class="wrap">
+  <div class="contact-panel reveal">
+    <h2>{{ .heading }}</h2>
+    <p>{{ .sub }}</p>
+    <a href="mailto:{{ .email | default site.Params.email }}" class="btn btn-primary">{{ .email | default site.Params.email }}</a>
+  </div>
+</section>
+{{ end }}

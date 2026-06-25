@@ -1,0 +1,17 @@
+{{ with .Params.compliance }}
+<section id="compliance" class="wrap">
+  <div class="section-head reveal">
+    <div class="eyebrow">{{ .eyebrow }}</div>
+    <h2>{{ .heading }}</h2>
+    <p>{{ .sub }}</p>
+  </div>
+  <div class="compliance-grid">
+    {{ range .items }}
+    <div class="badge reveal">
+      <span class="code">{{ .code }}</span>
+      <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

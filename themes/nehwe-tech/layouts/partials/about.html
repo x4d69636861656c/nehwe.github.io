@@ -1,0 +1,18 @@
+{{ with .Params.about }}
+<section id="about" class="wrap">
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="eyebrow">{{ .eyebrow }}</div>
+      <h2 style="font-family:var(--mono); font-weight:400; font-size:1.8rem; margin-bottom:18px;">{{ .heading }}</h2>
+      {{ range .paragraphs }}<p>{{ . }}</p>{{ end }}
+    </div>
+    {{ if .stats }}
+    <div class="stat-block reveal">
+      {{ range .stats }}
+      <div class="stat"><span>{{ .label }}</span><span class="v">{{ .value }}</span></div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,20 @@
+{{ with .Params.hero }}
+<header class="hero wrap">
+  <div>
+    <div class="eyebrow">{{ .eyebrow }}</div>
+    <h1>{{ .headline | safeHTML }}</h1>
+    <p class="sub">{{ .sub }}</p>
+    <div class="cta-row">
+      {{ with .cta_primary }}<a href="{{ .url }}" class="btn btn-primary">{{ .label }}</a>{{ end }}
+      {{ with .cta_secondary }}<a href="{{ .url }}" class="btn btn-ghost">{{ .label }}</a>{{ end }}
+    </div>
+  </div>
+  <div class="terminal">
+    <div class="term-bar">
+      <div class="term-dot"></div><div class="term-dot"></div><div class="term-dot"></div>
+      <div class="term-title">{{ .terminal_title }}</div>
+    </div>
+    <div class="term-body" id="termBody"></div>
+  </div>
+</header>
+{{ end }}

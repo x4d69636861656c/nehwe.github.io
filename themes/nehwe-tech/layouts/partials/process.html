@@ -1,0 +1,17 @@
+{{ with .Params.process }}
+<section id="process" class="wrap">
+  <div class="section-head reveal">
+    <div class="eyebrow">{{ .eyebrow }}</div>
+    <h2>{{ .heading }}</h2>
+  </div>
+  <div class="process-row">
+    {{ range .steps }}
+    <div class="step reveal">
+      <span class="num">{{ .number }}</span>
+      <h4>{{ .title }}</h4>
+      <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,38 @@
+baseURL = "https://nehwe.tech/"
+languageCode = "en-us"
+title = "nehwe.tech"
+theme = "nehwe-tech"
+
+[params]
+  email = "contact@nehwe.tech"
+  linkedin = "https://www.linkedin.com/company/nehwe-tech"
+  description = "Vulnerability scans, security checks, compliance, and AI automation for growing teams."
+  nav_cta_label = "Request a scan"
+  nav_cta_url = "#contact"
+  brand_name = "nehwe"
+  brand_suffix = ".tech"
+
+[[menu.main]]
+  name = "Services"
+  url = "#services"
+  weight = 1
+
+[[menu.main]]
+  name = "Compliance"
+  url = "#compliance"
+  weight = 2
+
+[[menu.main]]
+  name = "Process"
+  url = "#process"
+  weight = 3
+
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 4
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 5
