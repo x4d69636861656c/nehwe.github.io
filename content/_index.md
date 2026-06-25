@@ -87,7 +87,7 @@ about:
     - "We work with small and mid-sized businesses who need real coverage without standing up an internal security team — and with teams who already have one and need an outside set of eyes."
   stats:
     - label: "Response time"
-      value: "< 24h"
+      value: "< 48h"
     - label: "Findings validated"
       value: "100%"
     - label: "Frameworks covered"
