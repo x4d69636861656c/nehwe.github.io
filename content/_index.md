@@ -45,9 +45,9 @@ services:
     - tag: "02 · PREPARE"
       title: "Full Compliance Readiness Package"
       description: "Gap assessment combined with System Security Plan (SSP) development and a detailed POA&M - getting your organization fully documented and ready for NIST 800-171 compliance and CMMC certification"
-    - tag: "03 · HARDEN"
-      title: "STIG Implementation Support"
-      description: "Application of DISA STIGs and secure configurations for Windows, Linux, and network devices - hardening your infrastructure as a standalone service or targeted add-on to existing compliance efforts"
+    - tag: "03 · AUTOMATE"
+      title: "AI Automation Services"
+      description: "We design and automate the repetitive workflows that quietly eat your team's time and budget — reporting, data entry, approvals, follow-ups — so people spend hours on judgment calls, not busywork."
 
 compliance:
   eyebrow: "// compliance"
