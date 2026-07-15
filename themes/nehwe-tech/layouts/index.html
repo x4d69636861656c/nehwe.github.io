@@ -1,8 +1,132 @@
 {{ define "main" }}
-{{ partial "hero.html" . }}
-{{ partial "services.html" . }}
-{{ partial "compliance.html" . }}
-{{ partial "process.html" . }}
-{{ partial "about.html" . }}
-{{ partial "contact.html" . }}
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot"></span> currently taking new projects in {{ .Site.Params.city }}</p>
+      <h1>Secure your business. Modernize your site. Automate the busywork.</h1>
+      <p class="hero-sub">I'm a cybersecurity engineer who also designs and builds websites and practical AI automations — for small businesses in {{ .Site.Params.city }} who need real expertise without hiring three different vendors.</p>
+      <div class="hero-cta-row">
+        <a href="{{ .Site.Params.calendlyUrl }}" class="btn btn-primary" target="_blank" rel="noopener">Book a free discovery call →</a>
+        <a href="{{ "/portfolio/" | absURL }}" class="btn btn-ghost">See the work</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>{{ .Site.Params.trust.responseTime }}</strong><span>response time</span></div>
+        <div><strong>{{ .Site.Params.trust.findingsValidated }}</strong><span>findings validated</span></div>
+        <div><strong>{{ .Site.Params.trust.frameworksCovered }}</strong><span>frameworks covered</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 420 420" class="hero-graphic">
+        <circle cx="210" cy="210" r="170" fill="none" stroke="var(--border)" stroke-width="1"/>
+        <circle cx="210" cy="210" r="130" fill="none" stroke="var(--border)" stroke-width="1"/>
+        <circle cx="210" cy="210" r="90" class="pulse-ring" fill="none" stroke="var(--blue)" stroke-width="1.5"/>
+        <path d="M210,120 l50,25 v45 c0,32-21,53-50,63 -29,-10-50,-31-50,-63 v-45 z" fill="none" stroke="var(--green)" stroke-width="2.5"/>
+        <path d="M188,213 l16,16 28,-30" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="services-overview" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">// what I do</p>
+      <h2>Three things I'm genuinely good at.</h2>
+      <p class="sec-sub">Not a big menu of everything — the work I do myself, end to end.</p>
+    </div>
+    <div class="service-grid">
+      {{ range where .Site.RegularPages "Section" "services" }}
+        {{ partial "service-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="how-i-work">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">// how it works</p>
+      <h2>A straight line from scope to fix.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Scope</h3>
+        <p>We talk through what's actually going on — your systems, your site, or the workflow eating your team's time. No sales script.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Build</h3>
+        <p>I do the assessment, design the site, or build the automation myself — validated by hand, not handed off to a junior.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Deliver</h3>
+        <p>A clear report or a working product, plus a walkthrough call — not a 200-page PDF you have to decode alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ if .Site.Params.testimonials }}
+<section class="testimonials">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">// trust</p>
+      <h2>What it's like to work together.</h2>
+    </div>
+    <div class="testimonial-grid">
+      {{ range .Site.Params.testimonials }}
+      <div class="testimonial-card">
+        <p class="testimonial-quote">&ldquo;{{ .quote }}&rdquo;</p>
+        <p class="testimonial-attr"><strong>{{ .name }}</strong><span>{{ .company }}</span></p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ $featuredProjects := where (where .Site.RegularPages "Section" "portfolio") "Params.featured" true }}
+{{ if not $featuredProjects }}{{ $featuredProjects = first 2 (where .Site.RegularPages "Section" "portfolio") }}{{ end }}
+{{ if $featuredProjects }}
+<section class="featured-work">
+  <div class="wrap">
+    <div class="sec-head sec-head-row">
+      <div>
+        <p class="eyebrow">// recent work</p>
+        <h2>Selected projects.</h2>
+      </div>
+      <a href="{{ "/portfolio/" | absURL }}" class="link-more">View all projects →</a>
+    </div>
+    <div class="project-grid">
+      {{ range $featuredProjects }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ $recentPosts := first 3 (where .Site.RegularPages "Section" "blog") }}
+{{ if $recentPosts }}
+<section class="featured-blog">
+  <div class="wrap">
+    <div class="sec-head sec-head-row">
+      <div>
+        <p class="eyebrow">// insights</p>
+        <h2>From the blog.</h2>
+      </div>
+      <a href="{{ "/blog/" | absURL }}" class="link-more">Read all posts →</a>
+    </div>
+    <div class="post-grid">
+      {{ range $recentPosts }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ end }}

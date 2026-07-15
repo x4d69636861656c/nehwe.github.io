@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Types on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/types/</link>
+		<description>Recent content in Types on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/types/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cybersecurity</title>
+				<link>http://localhost:1313/types/cybersecurity/</link>
+				<pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/types/cybersecurity/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>AI Automation</title>
+				<link>http://localhost:1313/types/ai-automation/</link>
+				<pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/types/ai-automation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Website</title>
+				<link>http://localhost:1313/types/website/</link>
+				<pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/types/website/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

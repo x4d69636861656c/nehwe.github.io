@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Services on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/services/</link>
+		<description>Recent content in Services on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/services/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cybersecurity Services</title>
+				<link>http://localhost:1313/services/cybersecurity/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/services/cybersecurity/</guid>
+				<description>&lt;p&gt;Most small businesses don&amp;rsquo;t need a full internal security team — they need someone senior to tell them, clearly, where the actual risk is and what to fix first.&lt;/p&gt;&#xA;&lt;p&gt;I work with small and mid-sized businesses in Colorado Springs who need real security coverage without standing up an internal team, and with teams who already have one and want an outside set of eyes.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Website Design &amp; Development</title>
+				<link>http://localhost:1313/services/website-design/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/services/website-design/</guid>
+				<description>&lt;p&gt;I design and build websites the way a security engineer builds a website: fast by default, hardened by default, and without the plugin bloat that turns a marketing site into an attack surface.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>AI &amp; Process Automation</title>
+				<link>http://localhost:1313/services/ai-automation/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/services/ai-automation/</guid>
+				<description>&lt;p&gt;Most &amp;ldquo;AI automation&amp;rdquo; pitches are vague. Mine isn&amp;rsquo;t: I look at the specific spreadsheets, forms, and approval chains that eat your team&amp;rsquo;s week, and automate the parts that don&amp;rsquo;t need a human judgment call.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

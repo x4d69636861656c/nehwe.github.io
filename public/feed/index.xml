@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>The Feed on nehwe.tech</title>
+		<link>http://localhost:1313/feed/</link>
+		<description>Recent content in The Feed on nehwe.tech</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/feed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Hardening a Home Network in a Weekend</title>
+				<link>http://localhost:1313/feed/hardening-home-network/</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/feed/hardening-home-network/</guid>
+				<description>A no-nonsense checklist for locking down your router, IoT devices, and guest network without breaking anything.</description>
+			</item>
+			<item>
+				<title>Three USB Security Keys Worth Owning</title>
+				<link>http://localhost:1313/feed/usb-security-keys/</link>
+				<pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/feed/usb-security-keys/</guid>
+				<description>What a hardware key actually protects you from, and which ones are worth the money in 2026.</description>
+			</item>
+			<item>
+				<title>What an AI Receptionist Can (and Can&#39;t) Do</title>
+				<link>http://localhost:1313/feed/ai-receptionist-build/</link>
+				<pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/feed/ai-receptionist-build/</guid>
+				<description>Behind a real build for a local gym — what it handles on its own and where a human still has to step in.</description>
+			</item>
+			<item>
+				<title>Why Small Businesses Get Phished More Than You&#39;d Think</title>
+				<link>http://localhost:1313/feed/small-business-phishing/</link>
+				<pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/feed/small-business-phishing/</guid>
+				<description>Small shops assume they&amp;rsquo;re too small to be a target. That assumption is exactly what makes them one.</description>
+			</item>
+			<item>
+				<title>Building a Home Lab on a Budget</title>
+				<link>http://localhost:1313/feed/home-lab-on-a-budget/</link>
+				<pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/feed/home-lab-on-a-budget/</guid>
+				<description>You don&amp;rsquo;t need a rack of enterprise gear to start learning. Here&amp;rsquo;s what actually matters for a first home lab.</description>
+			</item>
+			<item>
+				<title>The Real Cost of a &#39;Free&#39; Website Builder</title>
+				<link>http://localhost:1313/feed/cost-of-free-website-builders/</link>
+				<pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/feed/cost-of-free-website-builders/</guid>
+				<description>The free tier gets you a site. It doesn&amp;rsquo;t get you one that&amp;rsquo;s actually yours, or one that shows up in search.</description>
+			</item>
+	</channel>
+</rss>

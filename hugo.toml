@@ -1,4 +1,99 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'nehwe.tech'
-theme = 'nehwe-tech'
+baseURL = "https://nehwe.tech/"
+languageCode = "en-us"
+title = "nehwe.tech — Cybersecurity, Web Design & AI Automation in Colorado Springs, CO"
+theme = "nehwe-tech"
+
+enableRobotsTXT = true
+enableEmoji = false
+summarylength = 30
+
+[pagination]
+  pagerSize = 9
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  type = "types"
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[menu]
+  [[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 10
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 20
+  [[menu.main]]
+    name = "Insights"
+    url = "/blog/"
+    weight = 30
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 40
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 50
+
+[params]
+  description = "Cybersecurity, secure web design, and practical AI automation for small businesses in Colorado Springs, CO. NIST/CMMC readiness, fast websites, and workflow automation from a senior security engineer."
+  author = "nehwe.tech"
+  ownerName = "Nehwe"
+  email = "contact@nehwe.tech"
+  phone = ""
+  city = "Colorado Springs"
+  region = "CO"
+  addressCountry = "US"
+  logo = "/images/logo.svg"
+  ogImage = "/images/og-default.svg"
+  themeColor = "#0B1220"
+  twitter = ""
+  linkedin = ""
+  github = ""
+  calendlyUrl = "https://calendly.com/nehwe-tech/discovery-call"
+  formEndpoint = "https://formspree.io/f/YOUR_FORM_ID"
+  googleAnalyticsID = ""
+  defaultDarkMode = true
+
+  [params.trust]
+    responseTime = "< 48h"
+    findingsValidated = "100%"
+    frameworksCovered = "5+"
+    engagementModel = "Project or retainer"
+
+  [[params.testimonials]]
+    quote = "We finally understood our own compliance gaps instead of just being handed a scary PDF. The roadmap was something our team could actually execute."
+    name = "Operations Director"
+    company = "Regional manufacturing subcontractor"
+
+  [[params.testimonials]]
+    quote = "Our new site loads instantly and actually ranks. More importantly, someone who understands security built it, so we're not one bad plugin away from a breach."
+    name = "Owner"
+    company = "Local professional services firm"
+
+  [[params.testimonials]]
+    quote = "The automation replaced a spreadsheet process that ate half a day every week. It paid for itself in the first month."
+    name = "Office Manager"
+    company = "Field services company, Colorado Springs"

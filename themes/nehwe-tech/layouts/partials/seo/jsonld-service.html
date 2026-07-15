@@ -1,0 +1,11 @@
+{{ if .IsPage }}
+{{ $data := dict
+  "@context" "https://schema.org"
+  "@type" "Service"
+  "serviceType" .Title
+  "description" ((.Description | default .Summary) | plainify | truncate 160)
+  "provider" (dict "@type" "ProfessionalService" "name" .Site.Params.author)
+  "areaServed" (dict "@type" "City" "name" .Site.Params.city)
+}}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{ end }}

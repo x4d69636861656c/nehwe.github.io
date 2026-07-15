@@ -1,0 +1,21 @@
+{{ if .IsHome }}
+{{ $data := dict
+  "@context" "https://schema.org"
+  "@type" "ProfessionalService"
+  "name" .Site.Params.author
+  "url" .Site.BaseURL
+  "logo" (.Site.Params.logo | absURL)
+  "image" (.Site.Params.ogImage | absURL)
+  "description" .Site.Params.description
+  "email" .Site.Params.email
+  "address" (dict
+    "@type" "PostalAddress"
+    "addressLocality" .Site.Params.city
+    "addressRegion" .Site.Params.region
+    "addressCountry" .Site.Params.addressCountry
+  )
+  "areaServed" (dict "@type" "City" "name" .Site.Params.city)
+  "priceRange" "$$"
+}}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{ end }}

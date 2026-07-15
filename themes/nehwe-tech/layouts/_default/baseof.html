@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ with site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}" data-theme="{{ if .Site.Params.defaultDarkMode }}dark{{ else }}light{{ end }}">
 <head>
-{{ partial "head.html" . }}
+  {{ partial "head.html" . }}
 </head>
 <body>
-{{ partial "nav.html" . }}
-<main>
-{{ block "main" . }}{{ end }}
-</main>
-{{ partial "footer.html" . }}
-{{ if .IsHome }}
-<script>
-  window.terminalLines = {{ .Params.hero.terminal_lines | jsonify | safeJS }};
-</script>
-{{ end }}
-<script src="{{ "js/main.js" | relURL }}"></script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "cta-footer.html" . }}
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/main.js" | absURL }}" defer></script>
 </body>
 </html>

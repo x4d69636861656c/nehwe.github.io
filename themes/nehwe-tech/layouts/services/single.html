@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="page-header service-header">
+  <div class="wrap">
+    <p class="eyebrow">// service</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-lede">{{ . }}</p>{{ end }}
+    <div class="hero-cta-row">
+      <a href="{{ .Site.Params.calendlyUrl }}" class="btn btn-primary" target="_blank" rel="noopener">Book a free discovery call →</a>
+      <a href="{{ "/contact/" | absURL }}" class="btn btn-ghost">Get a quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="prose-section">
+  <div class="wrap wrap-narrow prose">
+    {{ .Content }}
+  </div>
+</section>
+
+{{ with .Params.included }}
+<section class="included-section">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">// what's included</p><h2>Scope of work</h2></div>
+    <ul class="checklist">
+      {{ range . }}
+      <li>{{ partial "icon.html" "check" }} <span>{{ . }}</span></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
+
+{{ $relatedProjects := where site.RegularPages "Section" "portfolio" }}
+{{ $relatedProjects = where $relatedProjects "Params.types" "intersect" (slice .Params.relatedType) }}
+{{ if $relatedProjects }}
+<section class="featured-work">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">// proof</p><h2>Related work</h2></div>
+    <div class="project-grid">
+      {{ range first 2 $relatedProjects }}
+        {{ partial "project-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

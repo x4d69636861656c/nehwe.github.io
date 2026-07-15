@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Website on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/types/website/</link>
+		<description>Recent content in Website on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 18 Feb 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/types/website/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Secure Site Rebuild for a Local Professional Services Firm</title>
+				<link>http://localhost:1313/portfolio/secure-site-rebuild/</link>
+				<pubDate>Wed, 18 Feb 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/portfolio/secure-site-rebuild/</guid>
+				<description>&lt;p&gt;Beyond the speed and security wins, the client&amp;rsquo;s team can now edit content directly in Markdown without touching a page builder — which means fewer accidental layout breaks and no more waiting on a developer for a simple text change.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

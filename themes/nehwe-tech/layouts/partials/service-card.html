@@ -1,0 +1,7 @@
+{{/* expects . = a page in the services section */}}
+<a href="{{ .Permalink }}" class="service-card">
+  <div class="service-icon">{{ partial "icon.html" (.Params.icon | default "shield") }}</div>
+  <h3>{{ .Title }}</h3>
+  <p>{{ .Params.excerpt | default .Summary }}</p>
+  <span class="service-link">Learn more →</span>
+</a>

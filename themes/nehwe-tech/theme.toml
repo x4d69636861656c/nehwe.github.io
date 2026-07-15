@@ -1,12 +1,11 @@
-name = "nehwe-tech"
+name = "nehwe"
 license = "MIT"
-licenselink = "https://github.com/yourusername/nehwe-tech/blob/main/LICENSE"
-description = "A cyberpunk-styled, one-page Hugo theme for security consulting and tech businesses."
-homepage = "https://nehwe.tech"
-tags = ["cyberpunk", "security", "consulting", "dark", "one-page", "business"]
-features = ["responsive", "dark-mode-only", "one-page"]
-min_version = "0.110.0"
+licenselink = "https://github.com/nehwe-tech/nehwe-hugo-theme/blob/main/LICENSE"
+description = "A fast, SEO-optimized Hugo theme for cybersecurity, web design, and AI automation service businesses."
+homepage = "https://nehwe.tech/"
+tags = ["business", "security", "portfolio", "blog", "dark-mode", "seo"]
+min_version = "0.123.0"
 
 [author]
   name = "nehwe.tech"
-  homepage = "https://nehwe.tech"
+  homepage = "https://nehwe.tech/"

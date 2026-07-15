@@ -1,0 +1,13 @@
+{{ if not .IsHome }}
+{{ $items := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" .Site.BaseURL) }}
+{{ $pos := 2 }}
+{{ if .Section }}
+  {{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" (humanize .Section) "item" (printf "%s%s/" .Site.BaseURL .Section)) }}
+  {{ $pos = 3 }}
+{{ end }}
+{{ if .IsPage }}
+  {{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}
+{{ end }}
+{{ $data := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items }}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{ end }}

@@ -1,0 +1,51 @@
+{{ define "main" }}
+<article>
+  <section class="page-header post-header">
+    <div class="wrap wrap-narrow">
+      <p class="eyebrow">
+        {{ with .Params.categories }}{{ index . 0 }}{{ end }} · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time> · {{ .ReadingTime }} min read
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-lede">{{ . }}</p>{{ end }}
+    </div>
+  </section>
+
+  <section class="prose-section">
+    <div class="wrap post-layout">
+      {{ if .Params.showToc | default true }}
+      <aside class="toc-wrap">
+        <div class="toc-sticky">
+          <p class="footer-heading">On this page</p>
+          {{ .TableOfContents }}
+        </div>
+      </aside>
+      {{ end }}
+
+      <div class="prose">
+        {{ .Content }}
+
+        <div class="share-row">
+          <span class="footer-heading">Share</span>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">LinkedIn</a>
+          <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener" aria-label="Share on X">X</a>
+          <a href="mailto:?subject={{ .Title }}&body={{ .Permalink }}" aria-label="Share by email">Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ $related := .Site.RegularPages.Related . | first 3 }}
+  {{ with $related }}
+  <section class="featured-blog">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">// keep reading</p><h2>Related posts</h2></div>
+      <div class="post-grid">
+        {{ range . }}
+          {{ partial "post-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+</article>
+{{ end }}

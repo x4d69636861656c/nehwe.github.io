@@ -1,0 +1,19 @@
+<a href="{{ .Permalink }}" class="project-card">
+  <div class="project-thumb" {{ with .Params.image }}style="background-image:url('{{ . | absURL }}')"{{ end }}>
+    <div class="project-thumb-overlay"></div>
+    <div class="project-types">
+      {{ range .Params.types }}<span class="tag">{{ . }}</span>{{ end }}
+    </div>
+  </div>
+  <div class="project-body">
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Params.client }}</p>
+    {{ with .Params.results }}
+    <div class="project-results">
+      {{ range first 2 . }}
+      <div><strong>{{ .value }}</strong><span>{{ .label }}</span></div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</a>

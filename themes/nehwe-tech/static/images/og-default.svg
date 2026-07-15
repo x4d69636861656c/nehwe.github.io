@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0B1220"/>
+  <path d="M600 140l160 80v120c0 104-71 165-160 190-89-25-160-86-160-190V220l160-80z" fill="none" stroke="#33DB93" stroke-width="6"/>
+  <path d="M535 355l55 55 95-105" fill="none" stroke="#5B9BFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#EAEEF6">nehwe.tech</text>
+  <text x="600" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#93A1BA">Cybersecurity · Web Design · AI Automation</text>
+</svg>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+  <main id="main">
+    <section class="page-header" style="text-align:center; padding:140px 0;">
+      <div class="wrap">
+        <p class="eyebrow">// 404</p>
+        <h1>That page doesn't exist.</h1>
+        <p class="page-lede">The link might be broken, or the page may have moved.</p>
+        <div class="hero-cta-row" style="justify-content:center; margin-top:30px;">
+          <a href="{{ "/" | absURL }}" class="btn btn-primary">Back to homepage</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/main.js" | absURL }}" defer></script>
+</body>
+</html>

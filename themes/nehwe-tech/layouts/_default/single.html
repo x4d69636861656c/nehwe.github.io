@@ -1,10 +1,14 @@
 {{ define "main" }}
-<section class="wrap" style="padding-top:160px;">
-  <article class="prose reveal visible">
-    <div class="eyebrow">// {{ .Section | title }}</div>
-    <h1 style="font-family:var(--mono); font-weight:400; font-size:clamp(1.8rem,4vw,2.6rem); margin-bottom:18px;">{{ .Title }}</h1>
-    {{ if .Date }}<p style="color:var(--text-dim); font-family:var(--mono); font-size:0.85rem; margin-bottom:30px;">{{ .Date.Format "January 2, 2006" }}</p>{{ end }}
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">// {{ .Section | default "page" }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-lede">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="prose-section">
+  <div class="wrap wrap-narrow prose">
     {{ .Content }}
-  </article>
+  </div>
 </section>
 {{ end }}

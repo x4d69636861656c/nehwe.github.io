@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on nehwe.tech</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on nehwe.tech</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+	<channel>
+		<title>Tags on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/tags/</link>
+		<description>Recent content in Tags on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>AI Automation</title>
+				<link>http://localhost:1313/tags/ai-automation/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/ai-automation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>CMMC</title>
+				<link>http://localhost:1313/tags/cmmc/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/cmmc/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Compliance</title>
+				<link>http://localhost:1313/tags/compliance/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/compliance/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NIST 800-171</title>
+				<link>http://localhost:1313/tags/nist-800-171/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/nist-800-171/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Small Business</title>
+				<link>http://localhost:1313/tags/small-business/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/small-business/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Website Security</title>
+				<link>http://localhost:1313/tags/website-security/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/website-security/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Workflows</title>
+				<link>http://localhost:1313/tags/workflows/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/workflows/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

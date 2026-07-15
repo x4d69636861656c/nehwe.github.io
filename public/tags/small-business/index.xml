@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Small Business on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/tags/small-business/</link>
+		<description>Recent content in Small Business on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 08 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/small-business/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Five Workflows Worth Automating First</title>
+				<link>http://localhost:1313/blog/five-workflows-worth-automating/</link>
+				<pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/five-workflows-worth-automating/</guid>
+				<description>Not everything needs AI. These do.</description>
+			</item>
+			<item>
+				<title>Why Your Small Business Website Is Probably Your Weakest Security Link</title>
+				<link>http://localhost:1313/blog/website-weakest-security-link/</link>
+				<pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/website-weakest-security-link/</guid>
+				<description>Plugins age. Attackers scan for exactly that.</description>
+			</item>
+	</channel>
+</rss>

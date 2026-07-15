@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Compliance on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/tags/compliance/</link>
+		<description>Recent content in Compliance on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/compliance/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>What a Real CMMC Gap Assessment Should Look Like</title>
+				<link>http://localhost:1313/blog/cmmc-gap-assessment/</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/cmmc-gap-assessment/</guid>
+				<description>Most reports are 200 pages nobody reads. Here&amp;rsquo;s what actually gets fixed.</description>
+			</item>
+	</channel>
+</rss>

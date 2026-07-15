@@ -1,56 +1,95 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // mobile nav toggle
-  var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () { navLinks.classList.toggle('open'); });
-    navLinks.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+(function () {
+  "use strict";
+
+  /* ---------- Theme toggle ---------- */
+  var root = document.documentElement;
+  var themeToggle = document.getElementById("theme-toggle");
+  var stored = localStorage.getItem("nehwe-theme");
+  if (stored) root.setAttribute("data-theme", stored);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("nehwe-theme", next);
     });
   }
 
-  // scroll reveal
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealEls = document.querySelectorAll('.reveal');
-  if (reduceMotion) {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
-  } else if ('IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
+  /* ---------- Mobile nav ---------- */
+  var menuToggle = document.getElementById("menu-toggle");
+  var navMobile = document.getElementById("nav-mobile");
+  if (menuToggle && navMobile) {
+    menuToggle.addEventListener("click", function () {
+      var isOpen = navMobile.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+    navMobile.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navMobile.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
       });
-    }, { threshold: 0.15 });
-    revealEls.forEach(function (el) { obs.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
+    });
   }
 
-  // terminal typing sequence (data comes from window.terminalLines, set in baseof.html
-  // from the hero.terminal_lines front matter array)
-  var termBody = document.getElementById('termBody');
-  if (termBody && window.terminalLines && window.terminalLines.length) {
-    typeLines();
+  /* ---------- Portfolio filters ---------- */
+  var filterBtns = document.querySelectorAll(".filter-btn");
+  var projectItems = document.querySelectorAll(".project-item");
+  if (filterBtns.length && projectItems.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        filterBtns.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        var filter = btn.getAttribute("data-filter");
+        projectItems.forEach(function (item) {
+          var types = (item.getAttribute("data-types") || "").split(",");
+          var match = filter === "all" || types.indexOf(filter) !== -1;
+          item.classList.toggle("hidden", !match);
+        });
+      });
+    });
   }
 
-  function typeLines() {
-    termBody.innerHTML = '';
-    var i = 0;
-    function next() {
-      if (i >= window.terminalLines.length) {
-        if (!reduceMotion) setTimeout(typeLines, 3500);
-        return;
-      }
-      var item = window.terminalLines[i];
-      var div = document.createElement('div');
-      div.className = 'line t-' + (item.type || 'text');
-      div.textContent = item.text;
-      termBody.appendChild(div);
-      i++;
-      setTimeout(next, reduceMotion ? 0 : 420);
-    }
-    next();
+  /* ---------- Contact form (AJAX submit, no page reload) ---------- */
+  var form = document.getElementById("lead-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var submitBtn = document.getElementById("form-submit");
+      var successBox = document.getElementById("form-success");
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            form.hidden = true;
+            successBox.hidden = false;
+            successBox.scrollIntoView({ behavior: "smooth", block: "start" });
+          } else {
+            throw new Error("Form submission failed");
+          }
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send message →";
+          alert("Something went wrong sending your message — please email hello@nehwe.tech directly.");
+        });
+    });
   }
-});
+
+  /* ---------- Header shadow on scroll ---------- */
+  var header = document.getElementById("site-header");
+  if (header) {
+    var onScroll = function () {
+      header.style.borderBottomColor = window.scrollY > 8 ? "var(--blue)" : "var(--border)";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+})();

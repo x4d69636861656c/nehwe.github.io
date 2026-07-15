@@ -1,7 +1,37 @@
-<footer class="wrap">
-  <div>&copy; {{ now.Year }} {{ site.Title }} — All rights reserved.</div>
-  <div>
-    {{ with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; {{ end }}
-    <a href="mailto:{{ site.Params.email }}">Email</a>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <a href="{{ "/" | absURL }}" class="logo"><span class="logo-dot" aria-hidden="true"></span>nehwe<span class="logo-accent">.tech</span></a>
+      <p class="footer-tagline">Cybersecurity, web design, and AI automation for small businesses in {{ .Site.Params.city }}, {{ .Site.Params.region }}.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Services</p>
+      <ul>
+        {{ range where .Site.RegularPages "Section" "services" }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Company</p>
+      <ul>
+        <li><a href="{{ "/portfolio/" | absURL }}">Portfolio</a></li>
+        <li><a href="{{ "/blog/" | absURL }}">Insights</a></li>
+        <li><a href="{{ "/about/" | absURL }}">About</a></li>
+        <li><a href="{{ "/contact/" | absURL }}">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-heading">Direct</p>
+      <ul>
+        <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
+        {{ with .Site.Params.linkedin }}<li><a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a></li>{{ end }}
+        {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank" rel="noopener">GitHub</a></li>{{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© {{ now.Format "2006" }} {{ .Site.Params.author }} — All rights reserved.</span>
+    <span>Based in {{ .Site.Params.city }}, {{ .Site.Params.region }} · Built with Hugo</span>
   </div>
 </footer>

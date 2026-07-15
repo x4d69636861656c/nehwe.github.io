@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cybersecurity on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</title>
+		<link>http://localhost:1313/types/cybersecurity/</link>
+		<description>Recent content in Cybersecurity on nehwe.tech — Cybersecurity, Web Design &amp; AI Automation in Colorado Springs, CO</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 10 May 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/types/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CMMC Level 2 Readiness for a Defense Subcontractor</title>
+				<link>http://localhost:1313/portfolio/cmmc-readiness-manufacturing/</link>
+				<pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/portfolio/cmmc-readiness-manufacturing/</guid>
+				<description>&lt;p&gt;The engagement started with a two-day discovery sprint mapping their environment against every control family — access control, incident response, media protection, and so on. From there, the SSP and POA&amp;amp;M gave their leadership team something concrete to bring to their prime contractor: not just &amp;ldquo;we&amp;rsquo;re working on it,&amp;rdquo; but a dated plan with owners attached to each gap.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,64 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">// contact</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-lede">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="wrap contact-grid">
+    <div class="contact-form-wrap">
+      <form id="lead-form" class="lead-form" action="{{ .Site.Params.formEndpoint }}" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="service">Which service are you interested in?</label>
+          <select id="service" name="service" required>
+            <option value="">Select one</option>
+            <option value="Cybersecurity / CMMC">Cybersecurity &amp; CMMC / NIST compliance</option>
+            <option value="Website Design">Website design &amp; development</option>
+            <option value="AI Automation">AI &amp; process automation</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Tell me a bit about what you need</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="form-submit">Send message →</button>
+        <p class="form-note">No spam, no sales sequence — just a reply from me, usually within {{ .Site.Params.trust.responseTime }}.</p>
+      </form>
+      <div id="form-success" class="form-success" hidden>
+        <div class="service-icon">{{ partial "icon.html" "check" }}</div>
+        <h3>Message sent.</h3>
+        <p>Thanks — I'll get back to you within {{ .Site.Params.trust.responseTime }}. In the meantime, feel free to book a call directly.</p>
+        <a href="{{ .Site.Params.calendlyUrl }}" class="btn btn-ghost" target="_blank" rel="noopener">Book a discovery call →</a>
+      </div>
+    </div>
+
+    <div class="contact-side">
+      <div class="contact-card">
+        <p class="footer-heading">Direct</p>
+        <a href="mailto:{{ .Site.Params.email }}" class="contact-email">{{ .Site.Params.email }}</a>
+        <p class="contact-location">Based in {{ .Site.Params.city }}, {{ .Site.Params.region }} — serving clients locally and remote.</p>
+      </div>
+      <div class="map-embed">
+        <iframe
+          title="Service area map — {{ .Site.Params.city }}, {{ .Site.Params.region }}"
+          src="https://www.google.com/maps?q={{ .Site.Params.city }}+{{ .Site.Params.region }}&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
